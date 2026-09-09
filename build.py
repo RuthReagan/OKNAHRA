@@ -175,13 +175,13 @@ MEMBERSHIP_TIERS = [
 ]
 
 SPONSORSHIP_TIERS = [
-    {"name": "Red Sponsor", "price": "$500", "feather": "red-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
-    {"name": "Yellow Sponsor", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407", "sponsors": [
+    {"name": "Red Sponsor", "price": "$500", "feather": "red-feather.png", "features": ["Logo and/or ad linked to your webpage in quarterly newsletter", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
+    {"name": "Yellow Sponsor", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo and/or ad linked to your webpage on the OKNAHRA website for 12 months", "Complimentary job postings on the OKNAHRA website", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407", "sponsors": [
         {"name": "Native Health Advisors", "logo": "sponsors/native-health-advisors.png"},
         {"name": "MedFit Health", "logo": "sponsors/medfit-health.png"},
     ]},
-    {"name": "White Sponsor", "price": "$2,500", "feather": "white-feather.png", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
-    {"name": "Black Sponsor", "price": "$5,000", "feather": "black-feather.png", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
+    {"name": "White Sponsor", "price": "$2,500", "feather": "white-feather.png", "features": ["Pre-Summit promotion", "3 complimentary Summit registrations", "Complimentary job postings on the OKNAHRA website", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page with logo and/or ad linked to your webpage for 12 months", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
+    {"name": "Black Sponsor", "price": "$5,000", "feather": "black-feather.png", "features": ["Pre-Summit promotion", "5 complimentary Summit registrations", "Summit attendee list", "Complimentary job postings on the OKNAHRA website for 12 months", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page", "OKNAHRA membership list", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
 ]
 
 YEAR = datetime.datetime.now().year
