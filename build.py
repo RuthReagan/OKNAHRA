@@ -175,7 +175,10 @@ MEMBERSHIP_TIERS = [
 ]
 
 SPONSORSHIP_TIERS = [
-    {"name": "Red Sponsor", "price": "$500", "feather": "red-feather.png", "features": ["Logo and/or ad linked to your webpage in quarterly newsletter", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
+    {"name": "Red Sponsor", "price": "$500", "feather": "red-feather.png", "features": ["Logo and/or ad linked to your webpage in quarterly newsletter", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408", "sponsors": [
+        {"name": "NNAHRA", "logo": "nnahra.png"},
+        {"name": "SHRM", "logo": "shrm.png"},
+    ]},
     {"name": "Yellow Sponsor", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo and/or ad linked to your webpage on the OKNAHRA website for 12 months", "Complimentary job postings on the OKNAHRA website", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407", "sponsors": [
         {"name": "Native Health Advisors", "logo": "sponsors/native-health-advisors.png"},
         {"name": "MedFit Health", "logo": "sponsors/medfit-health.png"},
