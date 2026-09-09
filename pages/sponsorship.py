@@ -15,6 +15,22 @@ def _tier_card(t):
         f'style="height:56px; width:auto; display:block; margin:0 auto 10px;">'
         if feather else ""
     )
+    sponsors = t.get("sponsors")
+    if sponsors:
+        logos = "\n".join(
+            f'<img src="/images/logos/{s["logo"]}" alt="{s["name"]}" '
+            f'style="max-height:36px; width:auto; filter:grayscale(1); opacity:.85;">'
+            for s in sponsors
+        )
+        sponsors_block = f"""
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--color-border, #e5e5e5);">
+          <p style="font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--color-text-muted); margin-bottom:10px;">Current {t['name']}s</p>
+          <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:center;">
+            {logos}
+          </div>
+        </div>"""
+    else:
+        sponsors_block = ""
     return f"""
       <div class="price-card">
         {feather_img}
@@ -22,6 +38,7 @@ def _tier_card(t):
         <div class="price-amount" style="font-size:1.3rem;">{t['price']}</div>
         <ul>{feats}</ul>
         {cta}
+        {sponsors_block}
       </div>"""
 
 

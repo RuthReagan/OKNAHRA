@@ -176,7 +176,10 @@ MEMBERSHIP_TIERS = [
 
 SPONSORSHIP_TIERS = [
     {"name": "Red Sponsor", "price": "$500", "feather": "red-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
-    {"name": "Yellow Sponsor", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407"},
+    {"name": "Yellow Sponsor", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407", "sponsors": [
+        {"name": "Native Health Advisors", "logo": "sponsors/native-health-advisors.png"},
+        {"name": "MedFit Health", "logo": "sponsors/medfit-health.png"},
+    ]},
     {"name": "White Sponsor", "price": "$2,500", "feather": "white-feather.png", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
     {"name": "Black Sponsor", "price": "$5,000", "feather": "black-feather.png", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
 ]
@@ -313,7 +316,7 @@ def build():
     write("index.html", layout(
         "OKNAHRA | Oklahoma Native American HR Association",
         "OKNAHRA supports HR professionals serving Oklahoma's tribal nations and tribal enterprises through community, certification, and advocacy.",
-        "index.html", home.render(), extra_head=org_jsonld,
+        "index.html", home.render(SPONSORSHIP_TIERS), extra_head=org_jsonld,
     ))
     write("about.html", layout(
         "About Us | OKNAHRA",

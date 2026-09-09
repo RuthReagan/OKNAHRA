@@ -1,5 +1,35 @@
-def render():
-    return """
+def _tier_preview_card(t):
+    feather = t.get("feather")
+    feather_img = (
+        f'<img src="/images/logos/feathers/{feather}" alt="" aria-hidden="true" '
+        f'style="height:44px; width:auto; display:block; margin:0 auto 8px;">'
+        if feather else ""
+    )
+    return f"""
+      <div class="card" style="text-align:center;">
+        {feather_img}
+        <h3 style="margin-bottom:4px;">{t['name']}</h3>
+        <div class="price-amount" style="font-size:1.1rem;">{t['price']}</div>
+      </div>"""
+
+
+def render(sponsorship_tiers=None):
+    tier_cards = "\n".join(_tier_preview_card(t) for t in (sponsorship_tiers or []))
+    tiers_section = f"""
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Sponsorship</span>
+      <h2>Sponsorship levels</h2>
+      <p style="color:var(--color-text-muted);">Four tiers, each named for a feather in the OKNAHRA mark.</p>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(4, 1fr);">
+      {tier_cards}
+    </div>
+    <p style="text-align:center; margin-top:24px;"><a class="btn btn-gold" href="/sponsorship.html">See Sponsorship Details</a></p>
+  </div>
+</section>""" if tier_cards else ""
+    return f"""
 <section class="hero">
   <div class="container hero-grid">
     <div>
@@ -65,7 +95,7 @@ def render():
     <p style="text-align:center; margin-top:24px;"><a class="btn btn-gold" href="/sponsorship.html">Become a Sponsor</a></p>
   </div>
 </section>
-
+{tiers_section}
 <section class="section-alt">
   <div class="container" style="text-align:center;">
     <h2>Ready to join Oklahoma's tribal HR community?</h2>
