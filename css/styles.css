@@ -26,6 +26,14 @@
   --oknahra-cream: #FAF5EA;
   --oknahra-cream-dark: #F0E6D2;
   --oknahra-clay: #8C5A3C;
+  /* Mid-tone tan used specifically as a backdrop behind the feather icons —
+     picked deliberately darker than the cream tokens above. The white
+     feather asset is pale, low-opacity linework (by design, to stay subtle
+     within the full-color logo), so it barely shows against a near-white
+     backdrop in either theme. A tan this much darker roughly triples the
+     luminance contrast against that pale linework while still reading as a
+     light, warm color the black feather shows clearly against too. */
+  --oknahra-tan: #BFA073;
 
   /* Semantic tokens */
   --color-bg: var(--oknahra-cream);

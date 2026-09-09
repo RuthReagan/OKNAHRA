@@ -12,7 +12,7 @@ def _tier_card(t):
     feather = t.get("feather")
     feather_img = (
         f'<div style="width:76px; height:76px; margin:0 auto 10px; border-radius:50%; '
-        f'background:var(--oknahra-cream); display:flex; align-items:center; justify-content:center;">'
+        f'background:var(--oknahra-tan); display:flex; align-items:center; justify-content:center;">'
         f'<img src="/images/logos/feathers/{feather}" alt="" aria-hidden="true" '
         f'style="height:52px; width:auto; display:block;"></div>'
         if feather else ""
