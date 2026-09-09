@@ -131,7 +131,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": True,
-        "stripe_link": "https://buy.stripe.com/test_eVq28r1AMbu73upg2t9k400",
+        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_ASSOCIATE",
     },
     {
         "name": "Native Non-Profit Associate",
@@ -144,12 +144,12 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": False,
-        "stripe_link": "https://buy.stripe.com/test_4gMfZhfrC55J2ql7vX9k401",
+        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_NONPROFIT",
     },
     {
         "name": "Corporate Membership",
-        "price": "Contact us",
-        "period": "",
+        "price": "$150",
+        "period": "/ year",
         "eligibility": "For vendors, consultants, and suppliers who serve tribal enterprises but aren't employed by one.",
         "features": [
             "Non-voting membership",
@@ -157,11 +157,11 @@ MEMBERSHIP_TIERS = [
             "Newsletter and event access",
         ],
         "featured": False,
-        "stripe_link": None,
+        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_CORPORATE",
     },
     {
         "name": "Student Membership",
-        "price": "$100",
+        "price": "$25",
         "period": "/ year",
         "eligibility": "For students enrolled in post-secondary education in HR or a related field.",
         "features": [
@@ -170,14 +170,15 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": False,
-        "stripe_link": "https://buy.stripe.com/test_4gMeVd7Za55J5Cx2bD9k402",
+        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_STUDENT",
     },
 ]
 
 SPONSORSHIP_TIERS = [
-    {"name": "Bronze Partner", "price": "Amount pending confirmation", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event"]},
-    {"name": "Silver Partner", "price": "Amount pending confirmation", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention"]},
-    {"name": "Gold Partner", "price": "Amount pending confirmation", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit"]},
+    {"name": "Red Sponsor", "price": "$500", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_RED"},
+    {"name": "Yellow Sponsor", "price": "$1,000", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_YELLOW"},
+    {"name": "White Sponsor", "price": "$2,500", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_WHITE"},
+    {"name": "Black Sponsor", "price": "$5,000", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary Associate memberships for your team"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_BLACK"},
 ]
 
 YEAR = datetime.datetime.now().year

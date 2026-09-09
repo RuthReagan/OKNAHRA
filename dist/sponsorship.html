@@ -71,36 +71,48 @@
     <div class="pricing-grid">
       
       <div class="price-card">
-        <h3>Bronze Partner</h3>
-        <div class="price-amount" style="font-size:1.3rem;">Amount pending confirmation</div>
+        <h3>Red Sponsor</h3>
+        <div class="price-amount" style="font-size:1.3rem;">$500</div>
         <ul><li>Logo on the OKNAHRA Partners page</li>
 <li>Recognition at one event</li></ul>
-        <a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>
+        <a class="btn btn-primary btn-block" href="#" aria-disabled="true" data-stripe-slot="PASTE_STRIPE_PAYMENT_LINK_SPONSOR_RED">Sponsor — set up in Stripe</a>
       </div>
 
       <div class="price-card">
-        <h3>Silver Partner</h3>
-        <div class="price-amount" style="font-size:1.3rem;">Amount pending confirmation</div>
+        <h3>Yellow Sponsor</h3>
+        <div class="price-amount" style="font-size:1.3rem;">$1,000</div>
         <ul><li>Logo on the OKNAHRA Partners page</li>
 <li>Recognition at all events</li>
 <li>Newsletter mention</li></ul>
-        <a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>
+        <a class="btn btn-primary btn-block" href="#" aria-disabled="true" data-stripe-slot="PASTE_STRIPE_PAYMENT_LINK_SPONSOR_YELLOW">Sponsor — set up in Stripe</a>
       </div>
 
       <div class="price-card">
-        <h3>Gold Partner</h3>
-        <div class="price-amount" style="font-size:1.3rem;">Amount pending confirmation</div>
+        <h3>White Sponsor</h3>
+        <div class="price-amount" style="font-size:1.3rem;">$2,500</div>
         <ul><li>Logo on the OKNAHRA Partners page and homepage</li>
 <li>Recognition at all events</li>
 <li>Newsletter mention</li>
 <li>Exhibit table at the Summit</li></ul>
-        <a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>
+        <a class="btn btn-primary btn-block" href="#" aria-disabled="true" data-stripe-slot="PASTE_STRIPE_PAYMENT_LINK_SPONSOR_WHITE">Sponsor — set up in Stripe</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Black Sponsor</h3>
+        <div class="price-amount" style="font-size:1.3rem;">$5,000</div>
+        <ul><li>Logo on the OKNAHRA Partners page and homepage</li>
+<li>Premier recognition at all events</li>
+<li>Newsletter mention</li>
+<li>Exhibit table at the Summit</li>
+<li>Complimentary Associate memberships for your team</li></ul>
+        <a class="btn btn-primary btn-block" href="#" aria-disabled="true" data-stripe-slot="PASTE_STRIPE_PAYMENT_LINK_SPONSOR_BLACK">Sponsor — set up in Stripe</a>
       </div>
     </div>
     <p class="placeholder-note" style="margin-top:28px;">
-      Tier pricing is pending confirmation from the board (a prior "Corporate — $500/yr" tier was flagged for removal).
-      Once amounts are final, either list a Stripe Payment Link per tier here (same pattern as
-      the Membership page) or keep this page as an inquiry form if sponsorships are custom-quoted.
+      "Become a Sponsor" buttons are wired for Stripe Payment Links, same pattern as the
+      Membership page. Create one Payment Link per tier in the Stripe Dashboard
+      (Payment Links → New), then paste each URL into <code>build.py</code> in place of the
+      matching <code>PASTE_STRIPE_PAYMENT_LINK_SPONSOR_…</code> placeholder and rebuild.
     </p>
   </div>
 </section>

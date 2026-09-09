@@ -1,11 +1,20 @@
 def _tier_card(t):
     feats = "\n".join(f"<li>{f}</li>" for f in t["features"])
+    link = t.get("stripe_link")
+    if link:
+        is_placeholder = link.startswith("PASTE_")
+        if is_placeholder:
+            cta = f'<a class="btn btn-primary btn-block" href="#" aria-disabled="true" data-stripe-slot="{link}">Sponsor — set up in Stripe</a>'
+        else:
+            cta = f'<a class="btn btn-primary btn-block" href="{link}" rel="noopener">Become a Sponsor</a>'
+    else:
+        cta = '<a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>'
     return f"""
       <div class="price-card">
         <h3>{t['name']}</h3>
         <div class="price-amount" style="font-size:1.3rem;">{t['price']}</div>
         <ul>{feats}</ul>
-        <a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>
+        {cta}
       </div>"""
 
 
@@ -36,9 +45,10 @@ def render(tiers):
       {cards}
     </div>
     <p class="placeholder-note" style="margin-top:28px;">
-      Tier pricing is pending confirmation from the board (a prior "Corporate — $500/yr" tier was flagged for removal).
-      Once amounts are final, either list a Stripe Payment Link per tier here (same pattern as
-      the Membership page) or keep this page as an inquiry form if sponsorships are custom-quoted.
+      "Become a Sponsor" buttons are wired for Stripe Payment Links, same pattern as the
+      Membership page. Create one Payment Link per tier in the Stripe Dashboard
+      (Payment Links → New), then paste each URL into <code>build.py</code> in place of the
+      matching <code>PASTE_STRIPE_PAYMENT_LINK_SPONSOR_…</code> placeholder and rebuild.
     </p>
   </div>
 </section>
