@@ -175,10 +175,10 @@ MEMBERSHIP_TIERS = [
 ]
 
 SPONSORSHIP_TIERS = [
-    {"name": "Red Sponsor", "price": "$500", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
-    {"name": "Yellow Sponsor", "price": "$1,000", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407"},
-    {"name": "White Sponsor", "price": "$2,500", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
-    {"name": "Black Sponsor", "price": "$5,000", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary Associate memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
+    {"name": "Red Sponsor", "price": "$500", "feather": "red-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
+    {"name": "Yellow Sponsor", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407"},
+    {"name": "White Sponsor", "price": "$2,500", "feather": "white-feather.png", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
+    {"name": "Black Sponsor", "price": "$5,000", "feather": "black-feather.png", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
 ]
 
 YEAR = datetime.datetime.now().year

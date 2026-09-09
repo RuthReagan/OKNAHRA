@@ -9,8 +9,15 @@ def _tier_card(t):
             cta = f'<a class="btn btn-primary btn-block" href="{link}" rel="noopener">Become a Sponsor</a>'
     else:
         cta = '<a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>'
+    feather = t.get("feather")
+    feather_img = (
+        f'<img src="/images/logos/feathers/{feather}" alt="" aria-hidden="true" '
+        f'style="height:56px; width:auto; display:block; margin:0 auto 10px;">'
+        if feather else ""
+    )
     return f"""
       <div class="price-card">
+        {feather_img}
         <h3>{t['name']}</h3>
         <div class="price-amount" style="font-size:1.3rem;">{t['price']}</div>
         <ul>{feats}</ul>
