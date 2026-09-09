@@ -131,7 +131,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": True,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_ASSOCIATE",
+        "stripe_link": "https://buy.stripe.com/test_eVq28r1AMbu73upg2t9k400",
     },
     {
         "name": "Native Non-Profit Associate",
@@ -144,7 +144,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": False,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_NONPROFIT",
+        "stripe_link": "https://buy.stripe.com/test_4gMfZhfrC55J2ql7vX9k401",
     },
     {
         "name": "Corporate Membership",
@@ -170,7 +170,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": False,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_STUDENT",
+        "stripe_link": "https://buy.stripe.com/test_4gMeVd7Za55J5Cx2bD9k402",
     },
 ]
 
