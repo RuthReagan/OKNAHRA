@@ -11,21 +11,25 @@ def _tier_card(t):
         cta = '<a class="btn btn-outline btn-block" href="/contact.html">Inquire</a>'
     feather = t.get("feather")
     feather_img = (
+        f'<div style="width:76px; height:76px; margin:0 auto 10px; border-radius:50%; '
+        f'background:var(--oknahra-cream); display:flex; align-items:center; justify-content:center;">'
         f'<img src="/images/logos/feathers/{feather}" alt="" aria-hidden="true" '
-        f'style="height:56px; width:auto; display:block; margin:0 auto 10px;">'
+        f'style="height:52px; width:auto; display:block;"></div>'
         if feather else ""
     )
     sponsors = t.get("sponsors")
     if sponsors:
+        tier_color = t["name"].split()[0]
         logos = "\n".join(
+            f'<div style="flex:0 0 auto; background:var(--oknahra-cream); border-radius:8px; padding:8px 16px; display:flex; align-items:center;">'
             f'<img src="/images/logos/{s["logo"]}" alt="{s["name"]}" '
-            f'style="max-height:36px; width:auto; filter:grayscale(1); opacity:.85;">'
+            f'style="max-height:32px; width:auto; filter:grayscale(1); opacity:.85;"></div>'
             for s in sponsors
         )
         sponsors_block = f"""
         <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--color-border, #e5e5e5);">
-          <p style="font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--color-text-muted); margin-bottom:10px;">Current {t['name']}s</p>
-          <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:center;">
+          <p style="font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--color-text-muted); margin-bottom:10px;">Current {tier_color} Sponsors</p>
+          <div style="display:flex; flex-wrap:nowrap; gap:12px; align-items:center; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:6px;">
             {logos}
           </div>
         </div>"""

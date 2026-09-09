@@ -1,8 +1,10 @@
 def _tier_preview_card(t):
     feather = t.get("feather")
     feather_img = (
+        f'<div style="width:64px; height:64px; margin:0 auto 8px; border-radius:50%; '
+        f'background:var(--oknahra-cream); display:flex; align-items:center; justify-content:center;">'
         f'<img src="/images/logos/feathers/{feather}" alt="" aria-hidden="true" '
-        f'style="height:44px; width:auto; display:block; margin:0 auto 8px;">'
+        f'style="height:40px; width:auto; display:block;"></div>'
         if feather else ""
     )
     return f"""
