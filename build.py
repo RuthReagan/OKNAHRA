@@ -157,7 +157,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter and event access",
         ],
         "featured": False,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_CORPORATE",
+        "stripe_link": "https://buy.stripe.com/test_bJebJ15R241FaWRdUl9k404",
     },
     {
         "name": "Student Membership",
@@ -170,15 +170,15 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": False,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_STUDENT",
+        "stripe_link": "https://buy.stripe.com/test_7sY6oH2EQ9lZ4yt03v9k403",
     },
 ]
 
 SPONSORSHIP_TIERS = [
-    {"name": "Red Sponsor", "price": "$500", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_RED"},
-    {"name": "Yellow Sponsor", "price": "$1,000", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_YELLOW"},
-    {"name": "White Sponsor", "price": "$2,500", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_WHITE"},
-    {"name": "Black Sponsor", "price": "$5,000", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary Associate memberships for your team"], "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_SPONSOR_BLACK"},
+    {"name": "Red Sponsor", "price": "$500", "features": ["Logo on the OKNAHRA Partners page", "Recognition at one event"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408"},
+    {"name": "Yellow Sponsor", "price": "$1,000", "features": ["Logo on the OKNAHRA Partners page", "Recognition at all events", "Newsletter mention"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407"},
+    {"name": "White Sponsor", "price": "$2,500", "features": ["Logo on the OKNAHRA Partners page and homepage", "Recognition at all events", "Newsletter mention", "Exhibit table at the Summit"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
+    {"name": "Black Sponsor", "price": "$5,000", "features": ["Logo on the OKNAHRA Partners page and homepage", "Premier recognition at all events", "Newsletter mention", "Exhibit table at the Summit", "Complimentary Associate memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
 ]
 
 YEAR = datetime.datetime.now().year
