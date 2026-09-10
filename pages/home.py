@@ -48,7 +48,7 @@ def render(sponsorship_tiers=None):
       </div>
       <div class="hero-stats">
         <div class="stat"><strong>39</strong><span>Oklahoma tribal nations in our service area</span></div>
-        <div class="stat"><strong>500+</strong><span>HR professionals engaged since founding</span></div>
+        <div class="stat stat-cta"><strong>Now Forming</strong><span>Be one of OKNAHRA's founding members</span></div>
         <div class="stat"><strong>2×</strong><span>Annual Summits per year</span></div>
       </div>
       <p class="placeholder-note" style="margin-top:18px;">Stat figures carried over from prior materials — confirm current numbers before launch.</p>
