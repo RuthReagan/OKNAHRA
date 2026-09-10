@@ -21,9 +21,9 @@ def _tier_card(t):
     if sponsors:
         tier_color = t["name"].split()[0]
         logos = "\n".join(
-            f'<div style="flex:0 0 auto; background:var(--oknahra-cream); border-radius:8px; padding:8px 16px; display:flex; align-items:center;">'
+            f'<div style="flex:0 0 auto; background:#FFFFFF; border-radius:8px; padding:8px 16px; display:flex; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,.1);">'
             f'<img src="/images/logos/{s["logo"]}" alt="{s["name"]}" '
-            f'style="max-height:32px; width:auto; filter:grayscale(1); opacity:.85;"></div>'
+            f'style="max-height:32px; width:auto;"></div>'
             for s in sponsors
         )
         sponsors_block = f"""
@@ -88,9 +88,9 @@ def render(tiers):
       <h2>Thank you to our partners</h2>
     </div>
     <div class="sponsor-logos">
-      <img src="/images/logos/nnahra.png" alt="NNAHRA">
-      <img src="/images/logos/shrm.png" alt="SHRM">
-      <img src="/images/logos/hrci.png" alt="HR Certification Institute">
+      <div class="logo-chip"><img src="/images/logos/nnahra.png" alt="NNAHRA"></div>
+      <div class="logo-chip"><img src="/images/logos/shrm.png" alt="SHRM"></div>
+      <div class="logo-chip"><img src="/images/logos/hrci.png" alt="HR Certification Institute"></div>
     </div>
   </div>
 </section>
