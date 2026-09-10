@@ -17,24 +17,6 @@ def _tier_card(t):
         f'style="height:52px; width:auto; display:block;"></div>'
         if feather else ""
     )
-    sponsors = t.get("sponsors")
-    if sponsors:
-        tier_color = t["name"].split()[0]
-        logos = "\n".join(
-            f'<div style="flex:0 0 auto; background:#FFFFFF; border-radius:8px; padding:8px 16px; display:flex; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,.1);">'
-            f'<img src="/images/logos/{s["logo"]}" alt="{s["name"]}" '
-            f'style="max-height:32px; width:auto;"></div>'
-            for s in sponsors
-        )
-        sponsors_block = f"""
-        <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--color-border, #e5e5e5);">
-          <p style="font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--color-text-muted); margin-bottom:10px;">Current {tier_color} Sponsors</p>
-          <div style="display:flex; flex-wrap:nowrap; gap:12px; align-items:center; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:6px;">
-            {logos}
-          </div>
-        </div>"""
-    else:
-        sponsors_block = ""
     return f"""
       <div class="price-card">
         {feather_img}
@@ -42,7 +24,6 @@ def _tier_card(t):
         <div class="price-amount" style="font-size:1.3rem;">{t['price']}</div>
         <ul>{feats}</ul>
         {cta}
-        {sponsors_block}
       </div>"""
 
 
@@ -88,9 +69,9 @@ def render(tiers):
       <h2>Thank you to our partners</h2>
     </div>
     <div class="sponsor-logos">
-      <div class="logo-chip"><img src="/images/logos/nnahra.png" alt="NNAHRA"></div>
-      <div class="logo-chip"><img src="/images/logos/shrm.png" alt="SHRM"></div>
-      <div class="logo-chip"><img src="/images/logos/hrci.png" alt="HR Certification Institute"></div>
+      <a class="logo-chip" href="https://nnahra.org/" target="_blank" rel="noopener"><img src="/images/logos/nnahra.png" alt="NNAHRA"></a>
+      <a class="logo-chip" href="https://www.shrm.org/" target="_blank" rel="noopener"><img src="/images/logos/shrm.png" alt="SHRM"></a>
+      <a class="logo-chip" href="https://www.hrci.org/" target="_blank" rel="noopener"><img src="/images/logos/hrci.png" alt="HR Certification Institute"></a>
     </div>
   </div>
 </section>

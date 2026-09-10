@@ -45,12 +45,6 @@ def render(tiers):
     <div class="pricing-grid">
       {cards}
     </div>
-    <p class="placeholder-note" style="margin-top:28px;">
-      "Join Now" buttons are wired for Stripe Payment Links. Create one Payment Link per
-      paid tier in the Stripe Dashboard (Payment Links → New), then paste each URL into
-      <code>pages/membership.py</code> in place of the matching <code>PASTE_STRIPE_PAYMENT_LINK_…</code>
-      placeholder and rebuild. No card data ever touches this site — Stripe hosts the checkout page.
-    </p>
   </div>
 </section>
 

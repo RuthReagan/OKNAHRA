@@ -131,7 +131,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": True,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_ASSOCIATE",
+        "stripe_link": "https://buy.stripe.com/test_9B65kDdju55J7KFaI99k409",
     },
     {
         "name": "Native Non-Profit Associate",
@@ -144,7 +144,7 @@ MEMBERSHIP_TIERS = [
             "Newsletter, job board, and networking directory access",
         ],
         "featured": False,
-        "stripe_link": "PASTE_STRIPE_PAYMENT_LINK_NONPROFIT",
+        "stripe_link": "https://buy.stripe.com/test_6oU6oH4MY0Pt8OJbMd9k40a",
     },
     {
         "name": "Corporate Membership",
@@ -250,7 +250,7 @@ def layout(title, description, active, body, extra_head=""):
   <div class="container footer-grid">
     <div>
       <h4>OKNAHRA</h4>
-      <p style="color:#C9BBA6; max-width:32ch; font-size:0.92rem;">The Oklahoma Native American Human Resources Association supports HR professionals serving Oklahoma's tribal nations and tribal enterprises.</p>
+      <p style="color:#C9BBA6; max-width:32ch; font-size:0.92rem;">The Oklahoma Native American Human Resources Association exists to serve, guide, and support tribal human resources professionals working throughout Indian Country.</p>
     </div>
     <div>
       <h4>Explore</h4>
@@ -265,6 +265,7 @@ def layout(title, description, active, body, extra_head=""):
       <a href="/certification.html">Certification</a>
       <a href="https://nnahra.org/" rel="noopener">NNAHRA (National)</a>
       <a href="https://www.shrm.org/" rel="noopener">SHRM</a>
+      <a href="https://www.hrci.org/" rel="noopener">HRCI</a>
     </div>
     <div>
       <h4>Contact</h4>
@@ -312,8 +313,7 @@ def build():
   "alternateName": "OKNAHRA",
   "url": "{SITE_URL}/",
   "logo": "{SITE_URL}/images/logos/oknahra-mark.png",
-  "areaServed": "Oklahoma, USA",
-  "memberOf": {{"@type": "Organization", "name": "NNAHRA", "url": "https://nnahra.org/"}}
+  "areaServed": "Oklahoma, USA"
 }}
 </script>"""
     write("index.html", layout(

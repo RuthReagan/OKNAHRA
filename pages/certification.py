@@ -6,8 +6,8 @@ def render():
     <span class="eyebrow">Professional Development</span>
     <h1>Certification</h1>
     <p style="max-width:60ch; color:var(--color-text-muted); font-size:1.05rem;">
-      OKNAHRA members can pursue tribal-specific HR certification through our
-      national affiliate, NNAHRA, including the Tribal Human Resources
+      OKNAHRA members can pursue tribal-specific HR certification through
+      NNAHRA's certification program, including the Tribal Human Resources
       Professional (THRP), Tribal Adjudication Professional (TAP), and Tribal
       Management Professional (TMP) credentials.
     </p>

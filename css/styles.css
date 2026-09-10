@@ -477,6 +477,11 @@ section { padding: 72px 0; }
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  text-decoration: none;
+  transition: box-shadow .15s ease;
+}
+.logo-chip:hover, .logo-chip:focus-visible {
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
 .logo-chip img { max-height: 56px; width: auto; display: block; }
 

@@ -1,3 +1,31 @@
+TIER_BADGE_COLORS = {
+    "Red": ("var(--oknahra-red-dark)", "#FFFFFF"),
+    "Yellow": ("var(--oknahra-gold)", "var(--oknahra-black)"),
+    "White": ("var(--oknahra-tan)", "var(--oknahra-black)"),
+    "Black": ("var(--oknahra-black)", "var(--oknahra-cream)"),
+}
+
+
+def _all_sponsors(tiers):
+    out = []
+    for t in tiers or []:
+        color = t["name"].split()[0]
+        for s in t.get("sponsors", []):
+            out.append({"name": s["name"], "logo": s["logo"], "tier_name": t["name"], "color": color})
+    return out
+
+
+def _sponsor_chip(s):
+    bg, fg = TIER_BADGE_COLORS.get(s["color"], ("var(--oknahra-tan)", "var(--oknahra-black)"))
+    return f"""
+      <div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <a class="logo-chip" href="/sponsorship.html" style="padding:16px 28px;">
+          <img src="/images/logos/{s['logo']}" alt="{s['name']}" style="max-height:40px; width:auto;">
+        </a>
+        <span style="font-size:.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; padding:3px 10px; border-radius:999px; background:{bg}; color:{fg};">{s['tier_name']}</span>
+      </div>"""
+
+
 def _tier_preview_card(t):
     feather = t.get("feather")
     feather_img = (
@@ -16,6 +44,22 @@ def _tier_preview_card(t):
 
 
 def render(sponsorship_tiers=None):
+    all_sponsors = _all_sponsors(sponsorship_tiers)
+    sponsor_chips = "\n".join(_sponsor_chip(s) for s in all_sponsors)
+    sponsors_section = f"""
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Sponsors</span>
+      <h2>Our Sponsors</h2>
+      <p style="color:var(--color-text-muted);">Organizations investing directly in OKNAHRA's mission — shown with their sponsorship level.</p>
+    </div>
+    <div style="display:flex; flex-wrap:nowrap; gap:28px; align-items:flex-start; overflow-x:auto; -webkit-overflow-scrolling:touch; padding:4px 4px 12px; justify-content:center;">
+      {sponsor_chips}
+    </div>
+    <p style="text-align:center; margin-top:24px;"><a class="btn btn-gold" href="/sponsorship.html">Become a Sponsor</a></p>
+  </div>
+</section>""" if sponsor_chips else ""
     tier_cards = "\n".join(_tier_preview_card(t) for t in (sponsorship_tiers or []))
     tiers_section = f"""
 <section>
@@ -63,8 +107,8 @@ def render(sponsorship_tiers=None):
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow">Why OKNAHRA</span>
-      <h2>Built by Oklahoma tribal HR, for Oklahoma tribal HR</h2>
-      <p style="color:var(--color-text-muted);">A state-level affiliate of NNAHRA, focused on the specific workforce, legal, and cultural realities of HR inside Oklahoma's tribal governments and enterprises.</p>
+      <h2>Purpose-built for the realities of tribal HR in Oklahoma</h2>
+      <p style="color:var(--color-text-muted);">Focused on the specific workforce, legal, and cultural realities of HR inside Oklahoma's tribal governments and enterprises.</p>
     </div>
     <div class="card-grid">
       <div class="card">
@@ -82,7 +126,7 @@ def render(sponsorship_tiers=None):
     </div>
   </div>
 </section>
-
+{sponsors_section}
 <section>
   <div class="container">
     <div class="section-head center">
@@ -90,11 +134,10 @@ def render(sponsorship_tiers=None):
       <h2>Proud to work alongside</h2>
     </div>
     <div class="sponsor-logos">
-      <div class="logo-chip"><img src="/images/logos/nnahra.png" alt="NNAHRA"></div>
-      <div class="logo-chip"><img src="/images/logos/shrm.png" alt="SHRM"></div>
-      <div class="logo-chip"><img src="/images/logos/hrci.png" alt="HR Certification Institute"></div>
+      <a class="logo-chip" href="https://nnahra.org/" target="_blank" rel="noopener"><img src="/images/logos/nnahra.png" alt="NNAHRA"></a>
+      <a class="logo-chip" href="https://www.shrm.org/" target="_blank" rel="noopener"><img src="/images/logos/shrm.png" alt="SHRM"></a>
+      <a class="logo-chip" href="https://www.hrci.org/" target="_blank" rel="noopener"><img src="/images/logos/hrci.png" alt="HR Certification Institute"></a>
     </div>
-    <p style="text-align:center; margin-top:24px;"><a class="btn btn-gold" href="/sponsorship.html">Become a Sponsor</a></p>
   </div>
 </section>
 {tiers_section}
