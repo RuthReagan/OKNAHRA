@@ -1,0 +1,131 @@
+<!--
+  OKNAHRA — Member Welcome Email (DRAFT for review)
+  ---------------------------------------------------
+  Merge fields to wire up later (Airtable "Send email" step or ESP):
+    {{first_name}}        - member's first name
+    {{membership_tier}}   - e.g. "Corporate Membership (Non-Native)"
+  Fixed content (same for every member, not a merge field):
+    Promo code: OKNAHRAMEMBER50  ($50 off one job posting — created in Stripe as
+    coupon "Member Job Posting Discount", 2026-09-10)
+  Table-based layout + inline styles for email-client compatibility (Outlook, Gmail, etc).
+  Swap the logo <img> src for the final hosted URL before sending.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to OKNAHRA</title>
+</head>
+<body style="margin:0; padding:0; background:#F0E6D2; font-family:Georgia,'Times New Roman',serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F0E6D2; padding:32px 16px;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background:#FAF5EA; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.08);">
+
+        <!-- Header (light background so every feather in the full-color logo — including the black one — stays visible) -->
+        <tr>
+          <td style="background:#FFFFFF; padding:28px 32px; text-align:center;">
+            <img src="https://oknahra.net/images/logos/oknahra-full-lockup.png" alt="OKNAHRA" width="180" style="display:block; margin:0 auto; height:auto;">
+          </td>
+        </tr>
+
+        <!-- Accent rule -->
+        <tr>
+          <td style="height:4px; background:linear-gradient(90deg,#D3373C,#D9A518);"></td>
+        </tr>
+
+        <!-- Greeting -->
+        <tr>
+          <td style="padding:36px 40px 8px;">
+            <p style="margin:0 0 6px; font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#9E292D; font-weight:bold;">Welcome to OKNAHRA</p>
+            <h1 style="margin:0 0 18px; font-family:Georgia,'Times New Roman',serif; font-size:26px; line-height:1.25; color:#201F1F;">You're officially a member, {{first_name}}.</h1>
+            <p style="margin:0 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:1.6; color:#3A332B;">
+              Thank you for joining the Oklahoma Native American Human Resources Association as a
+              <strong>{{membership_tier}}</strong> member. You're now part of a community connecting,
+              certifying, and championing the HR professionals who support tribal governments and
+              tribal enterprises across Oklahoma.
+            </p>
+          </td>
+        </tr>
+
+        <!-- Benefits recap -->
+        <tr>
+          <td style="padding:0 40px 8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="padding:16px 0; border-top:1px solid #E7DCC8;">
+                  <p style="margin:0 0 10px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; letter-spacing:.03em; text-transform:uppercase; color:#201F1F;">What's included</p>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="24" valign="top" style="padding:4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#9E292D;">✓</td>
+                      <td valign="top" style="padding:4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#3A332B;">Community &amp; networking at the biannual Summit and year-round member events</td>
+                    </tr>
+                    <tr>
+                      <td width="24" valign="top" style="padding:4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#9E292D;">✓</td>
+                      <td valign="top" style="padding:4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#3A332B;">Certification pathways and professional development built for tribal HR</td>
+                    </tr>
+                    <tr>
+                      <td width="24" valign="top" style="padding:4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#9E292D;">✓</td>
+                      <td valign="top" style="padding:4px 0; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#3A332B;">A collective advocacy voice on legislative and regulatory issues affecting Indian Country HR</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Job board perk callout -->
+        <tr>
+          <td style="padding:8px 40px 32px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F0E6D2; border:1px solid #D9A518; border-radius:10px;">
+              <tr>
+                <td style="padding:22px 24px;">
+                  <p style="margin:0 0 6px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; letter-spacing:.03em; text-transform:uppercase; color:#8C5A3C;">Member perk — Job Board</p>
+                  <p style="margin:0 0 14px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.6; color:#3A332B;">
+                    Members list job openings for <strong>$50</strong> instead of the standard $100.
+                    Use this code at checkout:
+                  </p>
+                  <p style="margin:0 0 16px; text-align:center;">
+                    <span style="display:inline-block; font-family:'Courier New',Courier,monospace; font-size:18px; letter-spacing:.06em; font-weight:bold; color:#201F1F; background:#FFFFFF; border:1px dashed #9E292D; border-radius:6px; padding:10px 18px;">OKNAHRAMEMBER50</span>
+                  </p>
+                  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                    <tr>
+                      <td style="background:#D3373C; border-radius:999px;">
+                        <a href="https://oknahra.net/job-board.html" style="display:inline-block; padding:12px 28px; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; color:#FFFFFF; text-decoration:none;">List a Job</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Sign-off -->
+        <tr>
+          <td style="padding:0 40px 32px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.6; color:#3A332B;">
+            <p style="margin:0;">Glad to have you with us.</p>
+            <p style="margin:4px 0 0; font-weight:bold; color:#201F1F;">The OKNAHRA Board</p>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background:#201F1F; padding:24px 32px; text-align:center;">
+            <p style="margin:0 0 6px; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#B9AE9C;">Oklahoma Native American Human Resources Association</p>
+            <p style="margin:0; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#8A8072;">
+              <a href="https://oknahra.net" style="color:#F0CB4E; text-decoration:none;">oknahra.net</a>
+              &nbsp;·&nbsp;
+              <a href="#" style="color:#8A8072; text-decoration:underline;">Unsubscribe</a>
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
