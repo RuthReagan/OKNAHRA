@@ -21,7 +21,6 @@ def render():
       <div class="card"><h3>TAP</h3><p>Tribal Adjudication Professional — for HR professionals handling grievance and adjudication processes.</p></div>
       <div class="card"><h3>TMP</h3><p>Tribal Management Professional — for HR leaders managing tribal enterprise operations.</p></div>
     </div>
-    <p class="placeholder-note" style="margin-top:24px;">Confirm current certification partners/pricing before publishing — carried over from the national NNAHRA program structure as a starting point.</p>
   </div>
 </section>
 """

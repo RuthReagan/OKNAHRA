@@ -33,13 +33,6 @@ def render():
       code to use at checkout.
     </p>
     <a class="btn btn-primary" href="#" aria-disabled="true">List a Job — $100 (set up in Stripe)</a>
-    <p class="placeholder-note" style="max-width:56ch; margin:20px auto 0; text-align:left;">
-      Pricing plan (not yet built): one $100 Stripe Payment Link, with two Stripe promo codes —
-      a $50-off code for members, a 100%-off code for sponsors — checked and issued by staff
-      against the Airtable Members/Sponsors base before someone posts. No self-service login yet;
-      that's the Phase 3 member portal work (see project notes). Once decided, replace the button
-      below the same way Membership's Payment Link was wired up.
-    </p>
   </div>
 </section>
 """

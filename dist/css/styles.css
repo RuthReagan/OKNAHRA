@@ -253,6 +253,7 @@ p { margin: 0 0 1em; }
 }
 .btn-outline:hover { background: var(--color-heading); color: var(--color-bg); }
 .btn-block { width: 100%; }
+.btn-sm { padding: 8px 18px; font-size: 0.82rem; }
 .btn[aria-disabled="true"] {
   opacity: .55;
   pointer-events: none;

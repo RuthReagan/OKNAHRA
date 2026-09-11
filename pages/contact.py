@@ -28,7 +28,6 @@ def render():
         <textarea id="message" name="message" required></textarea>
       </div>
       <button class="btn btn-primary btn-block" type="submit">Send Message</button>
-      <p class="placeholder-note" style="margin-top:14px;">This form needs a submission handler (e.g. Formspree, a mailto fallback, or a small serverless function) wired in before launch — it currently doesn't send anywhere.</p>
     </form>
   </div>
 </section>

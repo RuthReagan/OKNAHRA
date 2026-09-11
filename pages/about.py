@@ -6,7 +6,10 @@ def _person_card(m):
         ('Photo pending' if not vacant else 'Seat open')
     )
     bio = f"<p>{m['bio']}</p>" if m.get("bio") else ""
-    note = f'<p class="placeholder-note">{m["note"]}</p>' if m.get("note") else ""
+    # Internal tracking notes (m.get("note")) intentionally not rendered on the
+    # public site as of Sept 11 2026 (James asked for all visitor-facing dev
+    # notes removed) — the note text still lives on each BOARD entry in
+    # build.py for our own reference on what's unconfirmed/pending per seat.
     cls = "person vacant" if vacant else "person"
     return f"""
       <div class="{cls}">
@@ -14,7 +17,6 @@ def _person_card(m):
         <h3>{m['name']}</h3>
         <span class="role">{m['role']}</span>
         {bio}
-        {note}
       </div>"""
 
 
@@ -64,10 +66,15 @@ def render(board):
     <div class="section-head center">
       <span class="eyebrow">Board of Directors</span>
       <h2>Meet the Board</h2>
-      <p style="color:var(--color-text-muted);">Board terms and seats follow the OKNAHRA Bylaws (Article VII). Seats without a confirmed name below are being updated — see note on each.</p>
+      <p style="color:var(--color-text-muted);">Board terms and seats follow the OKNAHRA Bylaws (Article VII). Seats without a confirmed name below are being updated.</p>
     </div>
     <div class="people-grid">
       {cards}
+    </div>
+    <div style="text-align:center; margin-top:48px; padding-top:36px; border-top:1px solid var(--color-border);">
+      <h3 style="margin-bottom:8px;">Interested in joining the Board?</h3>
+      <p style="max-width:56ch; margin:0 auto 20px; color:var(--color-text-muted);">OKNAHRA is actively filling open board seats. If you'd like to be considered, contact us and include your current bio.</p>
+      <a class="btn btn-primary" href="/contact.html">Contact Us to Become a Board Member</a>
     </div>
   </div>
 </section>
