@@ -53,12 +53,6 @@ def render(tiers):
     <div class="pricing-grid">
       {cards}
     </div>
-    <p class="placeholder-note" style="margin-top:28px;">
-      "Become a Sponsor" buttons are wired for Stripe Payment Links, same pattern as the
-      Membership page. Create one Payment Link per tier in the Stripe Dashboard
-      (Payment Links → New), then paste each URL into <code>build.py</code> in place of the
-      matching <code>PASTE_STRIPE_PAYMENT_LINK_SPONSOR_…</code> placeholder and rebuild.
-    </p>
   </div>
 </section>
 
