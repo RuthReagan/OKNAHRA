@@ -1,5 +1,7 @@
-def render():
-    return """
+def render(job_posting):
+    stripe_link = job_posting["stripe_link"]
+    price = job_posting["price"]
+    return f"""
 <section class="page-hero">
   <div class="container">
     <p class="breadcrumb"><a href="/index.html">Home</a> / Job Board</p>
@@ -32,7 +34,7 @@ def render():
       Already a member or sponsor? Email us to confirm your status and we'll send you a discount
       code to use at checkout.
     </p>
-    <a class="btn btn-primary" href="#" aria-disabled="true">List a Job — $100 (set up in Stripe)</a>
+    <a class="btn btn-primary" href="{stripe_link}" rel="noopener">List a Job — {price}</a>
   </div>
 </section>
 """
