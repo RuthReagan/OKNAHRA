@@ -36,10 +36,10 @@ BOARD = [
     {
         "name": "Ruth Reagan, MBA, SPHR, SHRM-CP, THRP, TMP",
         "role": "President",  # NOTE: placeholder seat assignment — confirm exact officer title
-        "photo": None,
+        "photo": "ruth-reagan.jpg",
         "bio": "Founder and CEO of Reagan Strategic Solutions.",
         "status": "confirmed",
-        "note": "Name/credentials/title updated per Sept 2026 request. Confirm which of the 10 bylaws officer seats this is (site previously did not specify).",
+        "note": "Name/credentials/title updated per Sept 2026 request; photo supplied Sept 12 2026. Confirm which of the 10 bylaws officer seats this is (site previously did not specify).",
     },
     {
         "name": "Vacant",
