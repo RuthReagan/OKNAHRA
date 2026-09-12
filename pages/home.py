@@ -11,15 +11,17 @@ def _all_sponsors(tiers):
     for t in tiers or []:
         color = t["name"].split()[0]
         for s in t.get("sponsors", []):
-            out.append({"name": s["name"], "logo": s["logo"], "tier_name": t["name"], "color": color})
+            out.append({"name": s["name"], "logo": s["logo"], "url": s.get("url"), "tier_name": t["name"], "color": color})
     return out
 
 
 def _sponsor_chip(s):
     bg, fg = TIER_BADGE_COLORS.get(s["color"], ("var(--oknahra-tan)", "var(--oknahra-black)"))
+    href = s.get("url") or "/sponsorship.html"
+    link_attrs = ' target="_blank" rel="noopener"' if s.get("url") else ""
     return f"""
       <div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:8px;">
-        <a class="logo-chip" href="/sponsorship.html" style="padding:16px 28px;">
+        <a class="logo-chip" href="{href}"{link_attrs} style="padding:16px 28px;">
           <img src="/images/logos/{s['logo']}" alt="{s['name']}" style="max-height:40px; width:auto;">
         </a>
         <span style="font-size:.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; padding:3px 10px; border-radius:999px; background:{bg}; color:{fg};">{s['tier_name']}</span>
