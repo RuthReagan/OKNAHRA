@@ -125,7 +125,7 @@ MEMBERSHIP_TIERS = [
         "period": "/ year",
         "eligibility": "For individuals actively employed in HR or another role with a Native American tribe or tribal enterprise.",
         "features": [
-            "Full voting rights at the annual Membership Meeting",
+            "Full voting rights at the biannual Summit",
             "Eligible to hold elected office on the Board",
             "Reduced pricing on OKNAHRA events and the biannual Summit",
             "Newsletter, job board, and networking directory access",
@@ -186,6 +186,11 @@ SPONSORSHIP_TIERS = [
     {"name": "White Feather", "price": "$3,000", "feather": "white-feather.png", "features": ["Pre-Summit promotion", "3 complimentary Summit registrations", "Complimentary job postings on the OKNAHRA website", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page with logo and/or ad linked to your webpage for 12 months", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
     {"name": "Black Feather", "price": "$5,000", "feather": "black-feather.png", "features": ["Pre-Summit promotion", "5 complimentary Summit registrations", "Summit attendee list", "Complimentary job postings on the OKNAHRA website for 12 months", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page", "OKNAHRA membership list", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
 ]
+
+JOB_POSTING = {
+    "price": "$100",
+    "stripe_link": "https://buy.stripe.com/test_5kQcN5a7ieGjc0VeYp9k40b",
+}
 
 YEAR = datetime.datetime.now().year
 
@@ -344,7 +349,7 @@ def build():
     write("job-board.html", layout(
         "Job Board | OKNAHRA",
         "Browse HR career opportunities in Oklahoma's tribal enterprises, or list your open role with OKNAHRA.",
-        "job-board.html", job_board.render(),
+        "job-board.html", job_board.render(JOB_POSTING),
     ))
     write("certification.html", layout(
         "Certification | OKNAHRA",
