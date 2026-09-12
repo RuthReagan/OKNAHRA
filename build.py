@@ -34,7 +34,7 @@ NAV = [
 # ---------------------------------------------------------------
 BOARD = [
     {
-        "name": "Ruth Reagan, TMP",
+        "name": "Ruth Reagan, MBA, SPHR, SHRM-CP, THRP, TMP",
         "role": "President",  # NOTE: placeholder seat assignment — confirm exact officer title
         "photo": None,
         "bio": "Founder and CEO of Reagan Strategic Solutions.",
