@@ -52,10 +52,10 @@ BOARD = [
     {
         "name": "Lena McQuary",
         "role": "Board Member at Large – NNAHRA Liaison",
-        "photo": None,
+        "photo": "lena-mcquary.jpg",
         "bio": "Chief Human Resources Officer at Downstream Casino Resort and an enrolled Quapaw Nation member, with 16 years leading HR for the tribal enterprise. 2022 NNAHRA HR Leader of the Year and named one of CIO Views Magazine's Top 10 Most Influential HR Executives of 2024. Certified Tribal Human Resources Professional (I & II).",
         "status": "confirmed",
-        "note": "Bio/credentials sourced from her NNAHRA board listing (nnahra.org) per request; photo to be sourced from the same page or requested directly — not redistributed here without confirming she's OK with the same headshot being reused on OKNAHRA's site.",
+        "note": "Bio/credentials sourced from her NNAHRA board listing (nnahra.org); James supplied her headshot directly Sept 12 2026.",
     },
     {
         "name": "Brandee Ingram",
