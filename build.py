@@ -90,12 +90,12 @@ BOARD = [
         "note": "Not covered by the Sept 2026 edit list — confirm who currently holds this bylaws-defined seat.",
     },
     {
-        "name": "Vacant",
+        "name": "Angela Bunner, M.Ed, SHRM-CP, THRP, TMP",
         "role": "VP, Membership",
-        "photo": None,
-        "bio": "",
-        "status": "vacant",
-        "note": "Not covered by the Sept 2026 edit list — confirm who currently holds this bylaws-defined seat.",
+        "photo": "angela-bunner.jpg",
+        "bio": "M.Ed, SHRM-CP, THRP, TMP.",
+        "status": "confirmed",
+        "note": "Added Sept 12 2026 per James's request; photo supplied directly. No outside employer/title given for the bio line beyond her credentials — update if a fuller professional bio becomes available.",
     },
     {
         "name": "Vacant",
