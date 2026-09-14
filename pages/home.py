@@ -11,7 +11,7 @@ def _all_sponsors(tiers):
     for t in tiers or []:
         color = t["name"].split()[0]
         for s in t.get("sponsors", []):
-            out.append({"name": s["name"], "logo": s["logo"], "url": s.get("url"), "tier_name": t["name"], "color": color})
+            out.append({"name": s["name"], "logo": s["logo"], "url": s.get("url"), "no_chip": s.get("no_chip", False), "tier_name": t["name"], "color": color})
     return out
 
 

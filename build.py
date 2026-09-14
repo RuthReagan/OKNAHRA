@@ -60,10 +60,9 @@ BOARD = [
     {
         "name": "Brandee Ingram",
         "role": "Secretary",
-        "photo": None,
+        "photo": "brandee-ingram.jpg",
         "bio": "Human Resources Director, Rock & Brews Casino.",
         "status": "confirmed",
-        "note": "Photo requested from Brandee, not yet received.",
     },
     {
         "name": "Vacant",
@@ -168,12 +167,11 @@ MEMBERSHIP_TIERS = [
 
 SPONSORSHIP_TIERS = [
     {"name": "Red Feather", "price": "$500", "feather": "red-feather.png", "features": ["Logo and/or ad linked to your webpage in quarterly newsletter", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_bJe9ATbbm55JaWR03v9k408", "sponsors": [
-        {"name": "Native Strategies", "logo": "sponsors/native-strategies.png", "no_chip": True},
+        {"name": "Native Strategies", "logo": "sponsors/native-strategies.png", "no_chip": True, "url": "https://native-strategies.com/"},
     ]},
     {"name": "Yellow Feather", "price": "$1,000", "feather": "yellow-feather.png", "features": ["Logo and/or ad linked to your webpage on the OKNAHRA website for 12 months", "Complimentary job postings on the OKNAHRA website", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_4gM28r1AMgOr1mh8A19k407", "sponsors": [
         {"name": "Native Health Advisors", "logo": "sponsors/native-health-advisors.png", "url": "https://nativehealthadvisors.com/"},
         {"name": "MedFit Health", "logo": "sponsors/medfit-health.png", "url": "https://www.medfit.health"},
-        {"name": "Reagan Strategic Solutions", "logo": "sponsors/reagan-strategic-solutions.png", "url": "https://reaganstrategicsolutions.com"},
     ]},
     {"name": "White Feather", "price": "$3,000", "feather": "white-feather.png", "features": ["Pre-Summit promotion", "3 complimentary Summit registrations", "Complimentary job postings on the OKNAHRA website", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page with logo and/or ad linked to your webpage for 12 months", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/test_5kQ8wPdjubu74ytdUl9k406"},
     {"name": "Black Feather", "price": "$5,000", "feather": "black-feather.png", "features": ["Pre-Summit promotion", "5 complimentary Summit registrations", "Summit attendee list", "Complimentary job postings on the OKNAHRA website for 12 months", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page", "OKNAHRA membership list", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/test_7sYdR9frC69N1mh03v9k405"},
