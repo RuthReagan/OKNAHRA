@@ -351,6 +351,11 @@ def build():
         "Get in touch with the OKNAHRA board.",
         "contact.html", contact.render(),
     ))
+    write("contact-thanks.html", layout(
+        "Message Sent | OKNAHRA",
+        "Your message to the OKNAHRA board has been received.",
+        "contact.html", contact.render_thanks(),
+    ))
 
     write_sitemap()
     write_robots()
