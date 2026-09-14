@@ -19,11 +19,24 @@ def _sponsor_chip(s):
     bg, fg = TIER_BADGE_COLORS.get(s["color"], ("var(--oknahra-tan)", "var(--oknahra-black)"))
     href = s.get("url") or "/sponsorship.html"
     link_attrs = ' target="_blank" rel="noopener"' if s.get("url") else ""
+    if s.get("no_chip"):
+        # Logo already has its own background/branding baked in (e.g. a photo-backed
+        # square mark) — skip the white .logo-chip card and show it directly.
+        logo_html = (
+            f'<a href="{href}"{link_attrs} style="display:block; border-radius:12px; overflow:hidden; '
+            f'box-shadow:0 1px 3px rgba(0,0,0,.15); line-height:0;">'
+            f'<img src="/images/logos/{s["logo"]}" alt="{s["name"]}" style="height:56px; width:56px; display:block; object-fit:cover;">'
+            f'</a>'
+        )
+    else:
+        logo_html = (
+            f'<a class="logo-chip" href="{href}"{link_attrs} style="padding:16px 28px;">'
+            f'<img src="/images/logos/{s["logo"]}" alt="{s["name"]}" style="max-height:40px; width:auto;">'
+            f'</a>'
+        )
     return f"""
       <div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:8px;">
-        <a class="logo-chip" href="{href}"{link_attrs} style="padding:16px 28px;">
-          <img src="/images/logos/{s['logo']}" alt="{s['name']}" style="max-height:40px; width:auto;">
-        </a>
+        {logo_html}
         <span style="font-size:.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; padding:3px 10px; border-radius:999px; background:{bg}; color:{fg};">{s['tier_name']}</span>
       </div>"""
 
