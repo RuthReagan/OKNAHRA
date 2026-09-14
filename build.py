@@ -75,14 +75,6 @@ BOARD = [
     },
     {
         "name": "Vacant",
-        "role": "Past President",
-        "photo": None,
-        "bio": "",
-        "status": "vacant",
-        "note": "Not covered by the Sept 2026 edit list — confirm who currently holds this bylaws-defined seat.",
-    },
-    {
-        "name": "Vacant",
         "role": "VP, Leadership Development",
         "photo": None,
         "bio": "",
@@ -106,12 +98,12 @@ BOARD = [
         "note": "Not covered by the Sept 2026 edit list — confirm who currently holds this bylaws-defined seat.",
     },
     {
-        "name": "Vacant",
+        "name": "Darius McGee",
         "role": "Board Member at Large – Sponsorships",
-        "photo": None,
+        "photo": "darius-mcgee.jpg",
         "bio": "",
-        "status": "vacant",
-        "note": "Not covered by the Sept 2026 edit list — confirm who currently holds this bylaws-defined seat.",
+        "status": "confirmed",
+        "note": "Added Sept 14 2026 per James's request; photo supplied directly. No bio/credentials given yet — add a bio line if one becomes available.",
     },
     # Removed per request — kept here (not rendered) so the edit is traceable:
     # Julio Munez — removed, prior title unknown, slot rendered as vacant above.
