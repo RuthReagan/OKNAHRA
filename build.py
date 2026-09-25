@@ -50,12 +50,12 @@ BOARD = [
         "note": "Terasita Cowan was originally proposed for this seat, but the Sept 8 2026 clarification confirmed she's being removed from the board along with Julio Munez and Yonne Tiger — not added. Confirm who currently holds Treasurer.",
     },
     {
-        "name": "Lena McQuary",
+        "name": "Vacant",
         "role": "Board Member at Large – NNAHRA Liaison",
-        "photo": "lena-mcquary.jpg",
-        "bio": "Chief Human Resources Officer at Downstream Casino Resort and an enrolled Quapaw Nation member, with 16 years leading HR for the tribal enterprise. 2022 NNAHRA HR Leader of the Year and named one of CIO Views Magazine's Top 10 Most Influential HR Executives of 2024. Certified Tribal Human Resources Professional (I & II).",
-        "status": "confirmed",
-        "note": "Bio/credentials sourced from her NNAHRA board listing (nnahra.org); James supplied her headshot directly Sept 12 2026.",
+        "photo": None,
+        "bio": "",
+        "status": "vacant",
+        "note": "Lena McQuary removed per James's Sept 25 2026 request; seat shown vacant rather than removed entirely, matching the Treasurer/President-Elect/etc. treatment. Confirm who currently holds this seat.",
     },
     {
         "name": "Brandee Ingram",
