@@ -174,7 +174,9 @@ SPONSORSHIP_TIERS = [
         {"name": "MedFit Health", "logo": "sponsors/medfit-health.png", "url": "https://www.medfit.health"},
     ]},
     {"name": "White Feather", "price": "$3,000", "feather": "white-feather.png", "features": ["Pre-Summit promotion", "3 complimentary Summit registrations", "Complimentary job postings on the OKNAHRA website", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page with logo and/or ad linked to your webpage for 12 months", "One complimentary OKNAHRA membership"], "stripe_link": "https://buy.stripe.com/bJe6oHgo20rSaDCcwi5kk0c"},
-    {"name": "Black Feather", "price": "$5,000", "feather": "black-feather.png", "features": ["Pre-Summit promotion", "5 complimentary Summit registrations", "Summit attendee list", "Complimentary job postings on the OKNAHRA website for 12 months", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page", "OKNAHRA membership list", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/5kQ8wPgo2fmM9zy8g25kk00"},
+    {"name": "Black Feather", "price": "$5,000", "feather": "black-feather.png", "features": ["Pre-Summit promotion", "5 complimentary Summit registrations", "Summit attendee list", "Complimentary job postings on the OKNAHRA website for 12 months", "Exhibitor booth in prime location at the Summit", "Quarterly email recognition", "Sponsor spotlight on the OKNAHRA home page", "OKNAHRA membership list", "Complimentary OKNAHRA memberships for your team"], "stripe_link": "https://buy.stripe.com/5kQ8wPgo2fmM9zy8g25kk00", "sponsors": [
+        {"name": "Integrated Insurance Partners", "logo": "sponsors/integrated-insurance-partners.png", "url": "https://iipartners.net/"},
+    ]},
 ]
 
 JOB_POSTING = {
