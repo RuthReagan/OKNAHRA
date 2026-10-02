@@ -55,7 +55,7 @@ BOARD = [
         "photo": None,
         "bio": "",
         "status": "vacant",
-        "note": "Lena McQuary removed per James's Sept 25 2026 request; seat shown vacant rather than removed entirely, matching the Treasurer/President-Elect/etc. treatment. Confirm who currently holds this seat.",
+        "note": "Lena McQuary removed per James's Sept 25 2026 request; seat shown vacant rather than removed entirely, matching the Treasurer/etc. treatment. Confirm who currently holds this seat.",
     },
     {
         "name": "Brandee Ingram",
@@ -63,14 +63,6 @@ BOARD = [
         "photo": "brandee-ingram.jpg",
         "bio": "Human Resources Director, Rock & Brews Casino.",
         "status": "confirmed",
-    },
-    {
-        "name": "Vacant",
-        "role": "President-Elect",
-        "photo": None,
-        "bio": "",
-        "status": "vacant",
-        "note": "Not covered by the Sept 2026 edit list — confirm who currently holds this bylaws-defined seat.",
     },
     {
         "name": "Taryn Reynolds, MSL, THRP II",
