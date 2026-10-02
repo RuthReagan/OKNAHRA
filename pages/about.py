@@ -38,7 +38,7 @@ def render(board):
       </p>
     </div>
     <div class="media-banner">
-      <img src="/images/stock/about-hero.jpg" alt="OKNAHRA member at work" loading="eager">
+      <img src="/images/stock/about-hero.jpg" alt="OKNAHRA members in a working meeting" loading="eager">
     </div>
   </div>
 </section>
