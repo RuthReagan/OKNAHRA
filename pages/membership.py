@@ -35,7 +35,7 @@ def render(tiers):
       </p>
     </div>
     <div class="media-banner">
-      <img src="/images/stock/membership-support.jpg" alt="OKNAHRA board members outside the First Americans Museum" loading="eager">
+      <img src="/images/stock/membership-support.jpg" alt="Speaker addressing members at an OKNAHRA event" loading="eager">
     </div>
   </div>
 </section>

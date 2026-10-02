@@ -1,7 +1,8 @@
 def _person_card(m):
     vacant = m["status"] == "vacant"
+    alt_text = m.get("alt", m["name"])
     photo_block = (
-        f'<img src="/images/board/{m["photo"]}" alt="{m["name"]}">'
+        f'<img src="/images/board/{m["photo"]}" alt="{alt_text}">'
         if m.get("photo") else
         ('Photo pending' if not vacant else 'Seat open')
     )
