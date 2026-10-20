@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Board Portal | OKNAHRA</title>
+<meta name="description" content="Sign-in for OKNAHRA board members.">
+<link rel="canonical" href="https://oknahra.net/admin/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OKNAHRA">
+<meta property="og:title" content="Board Portal | OKNAHRA">
+<meta property="og:description" content="Sign-in for OKNAHRA board members.">
+<meta property="og:url" content="https://oknahra.net/admin/">
+<meta property="og:image" content="https://oknahra.net/images/social/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/logos/favicon.png">
+<link rel="apple-touch-icon" href="/images/logos/oknahra-icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="/index.html">
+      <img class="brand-mark" src="/images/logos/oknahra-full-lockup.png" alt="OKNAHRA — Oklahoma Native American Human Resources Association" width="220" height="108">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mainNav" onclick="var n=document.getElementById('mainNav');var open=n.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+      <span aria-hidden="true">☰</span><span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="membership.html">Membership</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="events.html">Events</a>
+      <a href="job-board.html">Job Board</a>
+      <a href="certification.html">Certification</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="/membership.html">Join / Renew</a>
+    </nav>
+  </div>
+</header>
+<div class="motif-divider" role="presentation"></div>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="/index.html">Home</a> / Board portal</p>
+    <span class="eyebrow">Board members only</span>
+    <h1>Board Portal</h1>
+  </div>
+</section>
+
+<section class="adm" id="adm-root">
+  <div class="container">
+
+    <!-- Signed-out view -->
+    <div id="adm-login" class="adm-login" hidden>
+      <div class="card">
+        <h2 style="font-size:1.5rem">Sign in</h2>
+        <p class="adm-muted">Enter your board email address and we'll send you a one-time sign-in link. No password needed.</p>
+        <p id="adm-expired" class="adm-note adm-note-warn" hidden>That sign-in link has expired or was already used. Request a new one below.</p>
+        <form id="adm-login-form" novalidate>
+          <div class="form-field">
+            <label for="adm-email">Board email address</label>
+            <input id="adm-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit" id="adm-send">Email me a sign-in link</button>
+        </form>
+        <p id="adm-login-msg" class="adm-note" role="status" hidden></p>
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <p id="adm-loading" class="adm-muted" role="status">Loading…</p>
+
+    <!-- Signed-in dashboard -->
+    <div id="adm-dash" hidden>
+      <div class="adm-bar">
+        <p class="adm-muted" id="adm-who"></p>
+        <div class="adm-bar-actions">
+          <a class="btn btn-gold btn-sm" id="adm-csv" href="/api/admin-members-csv" download>Download current members (CSV)</a>
+          <button class="btn btn-outline btn-sm" type="button" id="adm-logout">Sign out</button>
+        </div>
+      </div>
+
+      <h2 class="adm-h">Revenue</h2>
+      <div id="adm-revenue-msg" class="adm-note adm-note-warn" hidden></div>
+      <div id="adm-revenue">
+        <div class="adm-tiles" id="adm-rev-tiles"></div>
+        <div class="adm-panel">
+          <div class="adm-panel-head">
+            <h3>Revenue by month</h3>
+            <span class="adm-muted" id="adm-chart-sub"></span>
+          </div>
+          <div class="adm-chart-wrap"><svg id="adm-chart" role="img" aria-label="Bar chart of revenue by month"></svg><div class="adm-tip" id="adm-tip" hidden></div></div>
+          <details class="adm-table-view">
+            <summary>View as table</summary>
+            <div class="adm-scroll"><table class="adm-table" id="adm-month-table"></table></div>
+          </details>
+        </div>
+        <div class="adm-two">
+          <div class="adm-panel"><h3>Where it comes from</h3><div id="adm-kind"></div></div>
+          <div class="adm-panel"><h3>Recent payments</h3><div class="adm-scroll"><table class="adm-table" id="adm-recent"></table></div></div>
+        </div>
+      </div>
+
+      <h2 class="adm-h">Membership</h2>
+      <div id="adm-members-msg" class="adm-note adm-note-warn" hidden></div>
+      <div id="adm-members">
+        <div class="adm-tiles" id="adm-mem-tiles"></div>
+        <div class="adm-two">
+          <div class="adm-panel"><h3>Current members by tier</h3><div id="adm-tier"></div></div>
+          <div class="adm-panel"><h3>All members by status</h3><div id="adm-status"></div></div>
+        </div>
+        <div class="adm-panel">
+          <div class="adm-panel-head">
+            <h3>Member list</h3>
+            <div class="adm-filters">
+              <label class="visually-hidden" for="adm-search">Search members</label>
+              <input id="adm-search" type="search" placeholder="Search name, company, email">
+              <label class="visually-hidden" for="adm-status-filter">Filter by status</label>
+              <select id="adm-status-filter"><option value="">All statuses</option></select>
+            </div>
+          </div>
+          <div class="adm-scroll"><table class="adm-table" id="adm-list"></table></div>
+          <p class="adm-muted" id="adm-list-count"></p>
+          <p class="adm-muted"><a id="adm-csv-all" href="/api/admin-members-csv?all=1" download>Download everyone, including inactive (CSV)</a></p>
+        </div>
+      </div>
+      <p class="adm-muted" id="adm-stamp"></p>
+    </div>
+  </div>
+</section>
+<script src="/js/admin.js" defer></script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>OKNAHRA</h4>
+      <p style="color:#C9BBA6; max-width:32ch; font-size:0.92rem;">The Oklahoma Native American Human Resources Association exists to serve, guide, and support tribal human resources professionals working throughout Indian Country.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="/about.html">About Us</a>
+      <a href="/membership.html">Membership</a>
+      <a href="/sponsorship.html">Sponsorship</a>
+      <a href="/events.html">Events</a>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <a href="/job-board.html">Job Board</a>
+      <a href="/certification.html">Certification</a>
+      <a href="https://nnahra.org/" rel="noopener">NNAHRA (National)</a>
+      <a href="https://www.shrm.org/" rel="noopener">SHRM</a>
+      <a href="https://www.hrci.org/" rel="noopener">HRCI</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="/contact.html">Get in touch</a>
+      <a href="mailto:info@oknahra.net">info@oknahra.net</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 OKNAHRA — Oklahoma Native American Human Resources Association. A 501(c)(6) nonprofit.</span>
+    <span style="white-space:nowrap">Oklahoma, USA &middot; <a href="/admin/">Board Login</a></span>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

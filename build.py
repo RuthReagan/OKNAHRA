@@ -275,7 +275,7 @@ def layout(title, description, active, body, extra_head=""):
   </div>
   <div class="container footer-bottom">
     <span>&copy; {YEAR} OKNAHRA — Oklahoma Native American Human Resources Association. A 501(c)(6) nonprofit.</span>
-    <span>Oklahoma, USA</span>
+    <span style="white-space:nowrap">Oklahoma, USA &middot; <a href="/admin/">Board Login</a></span>
   </div>
 </footer>
 <script src="/js/main.js"></script>
@@ -303,7 +303,7 @@ def build():
     if os.path.isdir(os.path.join(ROOT, "documents")):
         shutil.copytree(os.path.join(ROOT, "documents"), os.path.join(DIST, "documents"))
 
-    from pages import home, about, membership, sponsorship, events, job_board, certification, contact
+    from pages import home, about, membership, sponsorship, events, job_board, certification, contact, admin
 
     org_jsonld = f"""<script type="application/ld+json">
 {{
@@ -362,6 +362,13 @@ def build():
         "contact.html", contact.render_thanks(),
     ))
 
+    write("admin/index.html", layout(
+        "Board Portal | OKNAHRA",
+        "Sign-in for OKNAHRA board members.",
+        "admin/", admin.render(),
+        extra_head='<meta name="robots" content="noindex, nofollow">',
+    ))
+
     write_sitemap()
     write_robots()
     print(f"Built {len(NAV)} pages to {DIST}")
@@ -380,7 +387,7 @@ def write_sitemap():
 
 
 def write_robots():
-    write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+    write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nSitemap: {SITE_URL}/sitemap.xml\n")
 
 
 if __name__ == "__main__":

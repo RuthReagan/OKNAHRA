@@ -615,3 +615,49 @@ table.data-table tr:last-child td { border-bottom: none; }
   color: var(--color-text);
 }
 .form-field textarea { min-height: 120px; resize: vertical; }
+
+/* ============================================================
+   Board portal (/admin/)
+   ============================================================ */
+.adm { padding: 40px 0 72px; }
+.adm-muted { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 0.6em; }
+.adm-login { max-width: 460px; margin: 0 auto; }
+.adm-note { font-size: 0.92rem; padding: 12px 14px; border-radius: var(--radius); border: 1px solid var(--color-border); background: var(--color-bg); margin: 14px 0 0; }
+.adm-note-warn { border-color: var(--oknahra-gold); }
+.adm-bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.adm-bar-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.adm-h { font-size: 1.6rem; margin: 28px 0 16px; }
+.adm-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.adm-tile { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 16px 18px; display: flex; flex-direction: column; gap: 2px; }
+.adm-tile-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); }
+.adm-tile-value { font-family: var(--font-display); font-size: 1.9rem; color: var(--color-heading); font-variant-numeric: tabular-nums; line-height: 1.2; }
+.adm-tile-sub { font-size: 0.8rem; color: var(--color-text-muted); }
+.adm-panel { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 20px; margin-bottom: 18px; min-width: 0; }
+.adm-panel h3 { font-size: 1.15rem; margin: 0 0 12px; }
+.adm-panel-head { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.adm-panel-head h3 { margin: 0; }
+.adm-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.adm-chart-wrap { position: relative; }
+#adm-chart { width: 100%; height: auto; display: block; overflow: visible; }
+.adm-grid { stroke: var(--color-border); stroke-width: 1; }
+.adm-axis { stroke: var(--color-text-muted); stroke-width: 1; }
+.adm-axis-text { fill: var(--color-text-muted); font-size: 12px; font-family: var(--font-body); }
+.adm-bar-mark { fill: var(--color-accent); }
+.adm-mark { outline: none; cursor: default; }
+.adm-mark:hover .adm-bar-mark, .adm-mark:focus .adm-bar-mark { fill: var(--oknahra-red-dark); }
+.adm-mark:focus-visible { outline: 2px solid var(--color-heading); outline-offset: 2px; }
+.adm-tip { position: absolute; transform: translateX(-50%); background: var(--color-heading); color: var(--color-bg); font-size: 0.82rem; padding: 5px 10px; border-radius: 6px; white-space: nowrap; pointer-events: none; font-variant-numeric: tabular-nums; }
+.adm-table-view { margin-top: 10px; font-size: 0.9rem; }
+.adm-table-view summary { cursor: pointer; color: var(--color-link); }
+.adm-scroll { overflow-x: auto; }
+.adm-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.adm-table th, .adm-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+.adm-table th { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); white-space: nowrap; }
+.adm-table td.num, .adm-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.adm-bar-row { display: grid; grid-template-columns: minmax(90px, 38%) 1fr auto; gap: 10px; align-items: center; padding: 6px 0; font-size: 0.92rem; }
+.adm-bar-track { height: 10px; background: var(--color-bg); border-radius: 5px; overflow: hidden; }
+.adm-bar-fill { display: block; height: 100%; background: var(--color-accent); border-radius: 0 4px 4px 0; }
+.adm-bar-val { font-variant-numeric: tabular-nums; font-weight: 600; }
+.adm-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.adm-filters input, .adm-filters select { padding: 8px 10px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg); color: var(--color-text); font: inherit; font-size: 0.9rem; }
+.adm-note-warn { margin-bottom: 16px; }
