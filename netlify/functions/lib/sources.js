@@ -90,7 +90,11 @@ async function fetchCharges() {
 function summarizeRevenue(charges) {
   const paid = charges.filter((c) => c.paid && c.status === "succeeded" && c.livemode !== false);
   const cents = (c) => (c.amount || 0) - (c.amount_refunded || 0);
-  const kindOf = (c) => (c.invoice ? "Memberships" : "Sponsorships & job postings");
+  // Categories: any payment of $500+ is a sponsorship (memberships top out at $150, job postings are $100);
+  // otherwise a recurring subscription/invoice is a membership and a one-time payment is a job posting.
+  const SPONSORSHIP_MIN_CENTS = 50000;
+  const kindOf = (c) =>
+    (c.amount || 0) >= SPONSORSHIP_MIN_CENTS ? "Sponsorships" : c.invoice ? "Memberships" : "Job postings";
   const now = new Date();
   const thisMonth = monthKey(now.getTime() / 1000);
   const lastMonth = monthKey(new Date(now.getFullYear(), now.getMonth() - 1, 15).getTime() / 1000);
