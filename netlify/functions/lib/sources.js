@@ -8,7 +8,7 @@ const str = (v) => (Array.isArray(v) ? v.join(", ") : v == null ? "" : typeof v 
 
 // ---------------- Members (Airtable) ----------------
 async function fetchMembers() {
-  const token = process.env.AIRTABLE_TOKEN;
+  const token = process.env.AIRTABLE_TOKEN || process.env.AIRTABLE; // accept either variable name
   if (!token) throw new Error("not_configured");
   const rows = [];
   let offset = "";
