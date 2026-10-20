@@ -93,8 +93,11 @@ function summarizeRevenue(charges) {
   // Categories: any payment of $500+ is a sponsorship (memberships top out at $150, job postings are $100);
   // otherwise a recurring subscription/invoice is a membership and a one-time payment is a job posting.
   const SPONSORSHIP_MIN_CENTS = 50000;
+  // Newer Stripe API versions no longer put `invoice` on a charge, so also recognise subscription
+  // charges by the description Stripe gives them ("Subscription creation" / "Subscription update").
+  const isSubscription = (c) => !!c.invoice || /^subscription/i.test(c.description || "");
   const kindOf = (c) =>
-    (c.amount || 0) >= SPONSORSHIP_MIN_CENTS ? "Sponsorships" : c.invoice ? "Memberships" : "Job postings";
+    (c.amount || 0) >= SPONSORSHIP_MIN_CENTS ? "Sponsorships" : isSubscription(c) ? "Memberships" : "Job postings";
   const now = new Date();
   const thisMonth = monthKey(now.getTime() / 1000);
   const lastMonth = monthKey(new Date(now.getFullYear(), now.getMonth() - 1, 15).getTime() / 1000);
