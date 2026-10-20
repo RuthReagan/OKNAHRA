@@ -194,7 +194,7 @@ def nav_html(active):
     items = []
     for href, label in NAV:
         current = ' aria-current="page"' if href == active else ""
-        items.append(f'<a href="{href}"{current}>{label}</a>')
+        items.append(f'<a href="/{href}"{current}>{label}</a>')
     return "\n      ".join(items)
 
 
