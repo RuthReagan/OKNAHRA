@@ -661,3 +661,11 @@ table.data-table tr:last-child td { border-bottom: none; }
 .adm-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .adm-filters input, .adm-filters select { padding: 8px 10px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg); color: var(--color-text); font: inherit; font-size: 0.9rem; }
 .adm-note-warn { margin-bottom: 16px; }
+
+/* Expandable full bio on board cards */
+.person-more { margin-top: 10px; text-align: left; }
+.person-more summary { cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--color-accent, #D3373C); list-style: none; text-align: center; }
+.person-more summary::-webkit-details-marker { display: none; }
+.person-more summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.person-more[open] summary { margin-bottom: 8px; }
+.person-more p { font-size: 0.88rem; line-height: 1.55; }

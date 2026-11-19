@@ -7,6 +7,9 @@ def _person_card(m):
         ('Photo pending' if not vacant else 'Seat open')
     )
     bio = f"<p>{m['bio']}</p>" if m.get("bio") else ""
+    if m.get("long_bio"):
+        bio += (f'<details class="person-more"><summary>Read bio</summary>'
+                f'<p>{m["long_bio"]}</p></details>')
     # Internal tracking notes (m.get("note")) intentionally not rendered on the
     # public site as of Sept 11 2026 (James asked for all visitor-facing dev
     # notes removed) — the note text still lives on each BOARD entry in
