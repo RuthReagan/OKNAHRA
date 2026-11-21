@@ -42,13 +42,13 @@ BOARD = [
         "note": "Name/credentials/title updated per Sept 2026 request; photo supplied Sept 12 2026. Confirm which of the 10 bylaws officer seats this is (site previously did not specify).",
     },
     {
-        "name": "Lacee Reynolds, DBA",
+        "name": "Dr. Lacee Reynolds",
         "role": "Treasurer",
         "photo": "lacee-reynolds.jpg",
         "bio": "Chief of Staff, Osage Minerals Council",
         "long_bio": "Dr. Lacee Reynolds, a citizen of the Osage Nation, has served as Chief of Staff for the Osage Minerals Council since 2014. Her work spans financial administration, budgeting, auditing, and organizational operations, including staff management, developing job descriptions, and addressing personnel matters, along with supporting the governance of an elected council.</p><p>Lacee holds a Doctor of Business Administration in Management from Oklahoma Wesleyan University, an MBA with an emphasis in Accounting from Southeastern Oklahoma State University, and a bachelor’s degree in Business Administration from Rogers State University. She is also pursuing CPA licensure in Oklahoma. She has completed Harvard’s Tribal Innovation Labs program and the Indigenous Leadership Academy, and is currently participating in the Indigenous Data Champions Fellowship.</p><p>Throughout her career, Lacee has come to deeply value the people who keep tribal organizations running, and she understands how much it matters to give them the tools, support, and opportunities to succeed. She believes thriving tribal organizations begin with knowledgeable, well-supported people, and she is proud to bring that conviction to her service on OKNAHRA’s board.",
         "status": "confirmed",
-        "alt": "Lacee Reynolds, Treasurer, OKNAHRA",
+        "alt": "Dr. Lacee Reynolds, Treasurer, OKNAHRA",
         "note": "Added Oct 19 2026 per James's request; fills the previously-vacant Treasurer seat. Name shown as 'Lacee Reynolds, DBA' to match the credential style used for other board members and her own bio header (James referred to her as 'Dr.'). Bio line condensed from her supplied bio PDF (Chief of Staff, Osage Minerals Council since 2014; citizen of the Osage Nation) — a fuller bio could be used if wanted.",
     },
     {
